@@ -148,8 +148,7 @@ PRODUCT_PACKAGES += \
     Apollo \
     CMFileManager \
     LockClock \
-    CMAccount \
-    WhisperPush
+    CMAccount
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
@@ -273,6 +272,12 @@ else
     else
     CM_BUILDTYPE := bruce2728-odexed
     CM_EXTRAVERSION :=
+    endif
+endif
+
+ifeq ($(CM_BUILDTYPE), UNOFFICIAL)
+    ifneq ($(TARGET_UNOFFICIAL_BUILD_ID),)
+        CM_EXTRAVERSION := "-$(TARGET_UNOFFICIAL_BUILD_ID)"
     endif
 endif
 
