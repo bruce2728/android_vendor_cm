@@ -258,7 +258,7 @@ ifdef CM_BUILDTYPE
 else
     ifneq ($(WITH_DEXPREOPT), true)
     # If CM_BUILDTYPE is not defined, set to UNOFFICIAL
-    CM_BUILDTYPE := bruce2728-deodexed
+    CM_BUILDTYPE := bruce2728-linaro
     CM_EXTRAVERSION :=
     else
     CM_BUILDTYPE := bruce2728-odexed
